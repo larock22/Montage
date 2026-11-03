@@ -1338,7 +1338,7 @@ int mImgtbl_get_hdr (char *fname, struct Hdr_rec *hdr_rec, char *msg)
 
          equinox = hdr_rec->equinox;
 
-         pix2wcs (wcs, hdr_rec->ns/2., hdr_rec->nl/2., &lon, &lat);
+         pix2wcs (wcs, (hdr_rec->ns+1)/2., (hdr_rec->nl+1)/2., &lon, &lat);
 
 
          /* Final conversion to Equatorial J2000 decimal degrees */
