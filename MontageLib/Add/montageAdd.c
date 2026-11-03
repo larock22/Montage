@@ -917,7 +917,7 @@ struct mAddReturn *mAdd(char *inpath, char *tblfile, char *template_file, char *
       /* this file starts/ends          */
       /**********************************/
  
-      input[ifile].start = output.crpix2 - incrpix2[ifile] + 1;
+      input[ifile].start = floor(output.crpix2 - incrpix2[ifile] + 1 + 0.5);
       input[ifile].end   = input[ifile].start + innaxis2[ifile]-1;
 
       if(input[ifile].end > output.naxes[1])
